@@ -470,43 +470,5 @@ def get_metadata_numbers(connector_SQL, mode_list):
 
 
 if __name__ == '__main__':
-    host = '115.145.146.20'
-    username, password = 'manager', 'Ammd21306!'
+    pass
 
-    con_sftp = get_SFTP_Connection_paramiko(host, 21312, username, password)
-
-    remote_path = "/ammd_DB_FTP/XRD/29-42"
-    remote_file_list_to_delete = con_sftp.listdir(path=remote_path)
-    print(remote_file_list_to_delete)
-    for file in remote_file_list_to_delete:
-        con_sftp.remove(remote_path + '/' + file)
-    con_sftp.rmdir(remote_path)
-
-    keke = con_sftp.listdir(f"/ammd_DB_FTP/XRD/")
-    print(keke)
-    con_sftp.close()
-
-
-"""
-
-if __name__ == '__main__':
-    host = '115.145.146.20'
-    username, password = 'manager', 'Ammd21306!'
-    with get_MySQL_Connection(host, 21306, 'tfdb', username, password) as con_sql:
-        advanced_search(con_sql, "", "Composition", ["EDS", "Resistance","Thickness", "XRD", "Hardness", "Image"], get_total_number=True)
-        advanced_search(con_sql, 29, "id", ["EDS", "Resistance","Thickness", "XRD", "Hardness", "Image"], get_total_number=True)
-
-"""
-
-"""
-
-if __name__ == '__main__':
-    host = '115.145.146.20'
-    username, password = 'manager', 'Ammd21306!'
-
-    con_MySQL = get_MySQL_Connection(host, 21306, 'tfdb', username, password)
-    con_SFTP = get_SFTP_Connection_paramiko(host, 21312, 'tester', 'xptmxj123')
-    success, lst = get_property_metadata_dictionary(con_MySQL, 74)
-
-    print(lst)
-"""

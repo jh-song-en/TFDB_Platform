@@ -533,6 +533,6 @@ class sub_form(QtWidgets.QMainWindow):
 
 
 if __name__ == '__main__':
-    username, password = 'manager', 'Ammd21306!'
+    pass
 
 
