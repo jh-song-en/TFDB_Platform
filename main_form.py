@@ -30,6 +30,7 @@ from mysql.connector.locales.eng import client_error
 # Local libraries
 from DataFrameModel import DataFrameModel
 from sub_form import sub_form
+from download_manager_form import download_manager_form
 import data_plot
 import connection
 
@@ -63,7 +64,7 @@ class main_form(QtWidgets.QMainWindow):
         # Search tab
         self.periodic_table_is_open = True
         self.search_result.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
-
+        self.id_sample_list = []
         self.periodic_table.setCurrentIndex(0)
 
         # Upload tab
@@ -83,10 +84,6 @@ class main_form(QtWidgets.QMainWindow):
         self.ui.show()
 
         # Delete this function
-
-
-
-
 
     def authority_setting(self):
         with self.mysql_connection_open() as con_sql:
@@ -233,7 +230,6 @@ class main_form(QtWidgets.QMainWindow):
         for i in reversed(range(self.sample_meta_grid.count())):
             self.sample_meta_grid.itemAt(i).widget().setParent(None)
 
-
         for i in range(total_columns):
 
             display_text = df["display_text"][i]
@@ -250,7 +246,6 @@ class main_form(QtWidgets.QMainWindow):
                 combo_list = df["combo_list"][i].split("/")
                 widget.addItems(combo_list)
             self.sample_meta_grid.addWidget(widget, row, column + 1)
-
 
     def show_logbook(self, page):
         """
@@ -270,7 +265,7 @@ class main_form(QtWidgets.QMainWindow):
 
         select_query + from_query + middle_query
         with self.mysql_connection_open() as con_sql:
-            sample_df = pd.read_sql(select_query + middle_query + from_query , con=con_sql)
+            sample_df = pd.read_sql(select_query + middle_query + from_query, con=con_sql)
         model = DataFrameModel(sample_df)
         self.logbook_table_view.setModel(model)
         self.logbook_current_page_edit.setText(str(self.logbook_current_page))
@@ -298,7 +293,6 @@ class main_form(QtWidgets.QMainWindow):
             elif input_class == "QComboBox":
                 widget.setCurrentText(metadata_list[i])
         self.sample_meta_comment.setText(metadata_list[total_columns])
-
 
     def set_logbook_maximum_page(self, count, page_limit=20):
         """
@@ -342,7 +336,8 @@ class main_form(QtWidgets.QMainWindow):
                 # connection.upload_metadata returns last input id, if error, returns error message
                 sql_columns = self.sample_columns_info_df["SQL_columns"].tolist()[1:]
                 with self.mysql_connection_open() as con_sql:
-                    last_input_id = connection.upload_metadata_to_MySQL(con_sql, "Sample", sample_metadata, sql_columns=sql_columns)
+                    last_input_id = connection.upload_metadata_to_MySQL(con_sql, "Sample", sample_metadata,
+                                                                        sql_columns=sql_columns)
                 if isinstance(last_input_id, int):
                     self.showDialog("Sample metadata saved as id_sample: %d" % last_input_id)
                 else:
@@ -356,8 +351,8 @@ class main_form(QtWidgets.QMainWindow):
     def get_sample_metadata_list(self):
         total_columns = len(self.sample_columns_info_df) - 5
         metadata_list = [str(self.project_df.loc[self.sample_meta_project.currentText(), 'id_project']),
-                        self.sample_meta_date.text(),
-                        str(self.experimenter_df.loc[self.sample_meta_experimenter.currentText(), 'id_experimenter'])]
+                         self.sample_meta_date.text(),
+                         str(self.experimenter_df.loc[self.sample_meta_experimenter.currentText(), 'id_experimenter'])]
 
         for i in range(total_columns):
             index = i * 3 + 2
@@ -374,8 +369,6 @@ class main_form(QtWidgets.QMainWindow):
         metadata_list
 
         return metadata_list
-
-
 
     """
     #######################################################################################
@@ -420,9 +413,10 @@ class main_form(QtWidgets.QMainWindow):
         self.search_keyword = self.search_search_bar_edit.text()
         self.search_type = self.search_search_type_combo.currentText()
         with self.mysql_connection_open() as con_sql:
-            count = connection.advanced_search(con_sql, self.search_keyword, self.search_type, self.mode_list,
+            self.id_sample_list = connection.advanced_search(con_sql, self.search_keyword, self.search_type, self.mode_list,
                                                get_total_number=True)
 
+        count = len(self.id_sample_list)
         self.set_search_maximum_page(count)
         self.search_current_page = 1
         self.SearchCurrentPage.setText('1')
@@ -446,7 +440,7 @@ class main_form(QtWidgets.QMainWindow):
             self.prevButtonSearch.setEnabled(True)
             self.nextButtonSearch.setEnabled(True)
 
-            df = self.sample_columns_info_df[["SQL_columns","search"]]
+            df = self.sample_columns_info_df[["SQL_columns", "search"]]
 
             with self.mysql_connection_open() as con_sql:
                 sample_df = connection.advanced_search(con_sql, self.search_keyword, self.search_type, self.mode_list,
@@ -461,6 +455,14 @@ class main_form(QtWidgets.QMainWindow):
                 self.prevButtonSearch.setEnabled(False)
         except:
             self.error_dialog.showMessage(str(sys.exc_info()))
+
+    def search_download_manager_button_clicked(self):
+        if len(self.id_sample_list) == 0:
+            self.error_dialog.showMessage("sample not selected")
+            return 0
+        self.download_manager_window = download_manager_form(self.username, self.password, self.mysql_host, self.sftp_host, self.mysql_port, self.sftp_port,self.id_sample_list, self.mode_list, parent=self)
+
+
 
     def set_search_maximum_page(self, count, page_limit=20):
         self.prevButtonSearch.setEnabled(False)
@@ -830,7 +832,7 @@ class main_form(QtWidgets.QMainWindow):
             self.manage_sample_table_widget.verticalHeader().setVisible(False)
 
             columns = ["id_columns", "Display text", "Input class", "SQL columns",
-                                    "SQL datatype", "Combo list", "Search"]
+                       "SQL datatype", "Combo list", "Search"]
             self.manage_sample_table_widget.setHorizontalHeaderLabels(columns)
             for index, row in df.iterrows():
 
@@ -847,13 +849,12 @@ class main_form(QtWidgets.QMainWindow):
                     editable = False
 
                 self.set_sample_manage_table_widget_row(index, editable, previous_order, display_text, input_class,
-                                                 sql_columns,
-                                                 sql_datatype, combo_list, search)
+                                                        sql_columns,
+                                                        sql_datatype, combo_list, search)
             pass
 
-
     def set_sample_manage_table_widget_row(self, index, editable, id_columns, display_text, input_class, sql_columns,
-                                    sql_datatype, combo_list, search):
+                                           sql_datatype, combo_list, search):
         item = QTableWidgetItem(id_columns)
         item.setFlags(QtCore.Qt.ItemIsSelectable | QtCore.Qt.ItemIsEnabled)
         self.manage_sample_table_widget.setItem(index, 0, item)
@@ -928,9 +929,7 @@ class main_form(QtWidgets.QMainWindow):
                 return 0
             self.manage_sample_table_widget.insertRow(selected_row + 1)
             self.set_sample_manage_table_widget_row(selected_row + 1, True, "", "New Column", "QLineEdit", "new_column",
-                                             "INT()","","")
-
-
+                                                    "INT()", "", "")
 
     def manage_general_delete_row_button_clicked(self):
         clicked_button = self.focusWidget()
@@ -1087,8 +1086,8 @@ class main_form(QtWidgets.QMainWindow):
             pass
 
         elif clicked_button == self.manage_sample_apply_button:
-            check = self.showDialog( "Data can be lost during the modification. "
-                                     "Do you want to change the database setting?")
+            check = self.showDialog("Data can be lost during the modification. "
+                                    "Do you want to change the database setting?")
             if check:
                 df = self.get_current_info_table("Sample", only_df=True)
                 edited_df = self.get_edited_sample_manage_table_df()
@@ -1100,7 +1099,8 @@ class main_form(QtWidgets.QMainWindow):
                 return 0
 
     def get_edited_sample_manage_table_df(self):
-        column_list = ["id_columns", "display_text", "input_class", "SQL_columns", "SQL_datatype", "combo_list", "sample"]
+        column_list = ["id_columns", "display_text", "input_class", "SQL_columns", "SQL_datatype", "combo_list",
+                       "sample"]
         data = []
         current_row_count = self.manage_sample_table_widget.rowCount()
         for i in range(current_row_count):
@@ -1191,7 +1191,6 @@ class main_form(QtWidgets.QMainWindow):
                                    "(`id_columns`, `display_text`, `input_class`, `SQL_columns`, `SQL_datatype`, `combo_list`, `search`) " \
                                    "VALUES (%s, %s, %s, %s, %s, %s, %s);"
 
-
                     cursor.execute(edited_query, input_list)
                 con_sql.commit()
                 cursor.close()
@@ -1203,6 +1202,7 @@ class main_form(QtWidgets.QMainWindow):
     def manage_property_manage_button_clicked(self):
         self.main_stacked_widget.setCurrentIndex(4)
         self.manage_initial_function()
+
     """
     Manage tab
     """
@@ -1731,7 +1731,7 @@ class main_form(QtWidgets.QMainWindow):
 
     def manage_cancel_button_clicked(self):
         self.main_stacked_widget.setCurrentIndex(3)
-        #todo
+
 
     """
     Message Box
@@ -1756,8 +1756,6 @@ class main_form(QtWidgets.QMainWindow):
 
     def closeEvent(self, event):
         pass
-
-
 
     def get_metadata_list(self, mode):
         """
