@@ -214,12 +214,12 @@ class sub_form(QtWidgets.QMainWindow):
         if simple:
             self.result_file_list_view.setVisible(False)
             with self.sftp_connection_open() as con_sftp:
-                remote_path = f"/ammd_DB_FTP/{self.mode}/{self.sample_id}-{self.meta_id}.csv"
+                remote_path = f"/TFDB_drive/{self.mode}/{self.sample_id}-{self.meta_id}.csv"
                 html = data_plot.visualize_remote_data_to_plot(con_sftp, remote_path, self.mode)
                 self.result_plot_view.setHtml(html)
         else:
             with self.sftp_connection_open() as con_sftp:
-                remote_directory = f"/ammd_DB_FTP/{self.mode}/{self.sample_id}-{self.meta_id}/"
+                remote_directory = f"/TFDB_drive/{self.mode}/{self.sample_id}-{self.meta_id}/"
 
                 try:
                     file_list = con_sftp.listdir(path = remote_directory)
@@ -238,7 +238,7 @@ class sub_form(QtWidgets.QMainWindow):
             index = self.result_file_list_view.selectionModel().selectedIndexes()
 
         file_name = self.result_file_list_view.model().itemData(index)[0]
-        full_remote_file_name = f"/ammd_DB_FTP/{self.mode}/{self.sample_id}-{self.meta_id}/{file_name}"
+        full_remote_file_name = f"/TFDB_drive/{self.mode}/{self.sample_id}-{self.meta_id}/{file_name}"
 
         if self.current_plot == full_remote_file_name:
             pass
@@ -405,13 +405,13 @@ class sub_form(QtWidgets.QMainWindow):
                     with self.mysql_connection_open() as con_sql, self.sftp_connection_open() as con_sftp:
                         try:
                             if simple:
-                                remote_file_to_delete = f"/ammd_DB_FTP/{self.mode}/{self.sample_id}-{self.meta_id}.csv"
+                                remote_file_to_delete = f"/TFDB_drive/{self.mode}/{self.sample_id}-{self.meta_id}.csv"
                                 try:
                                     con_sftp.remove(remote_file_to_delete)
                                 except IOError:
                                     remote_file_exists = False
                             else:
-                                remote_path = f"/ammd_DB_FTP/{self.mode}/{self.sample_id}-{self.meta_id}/"
+                                remote_path = f"/TFDB_drive/{self.mode}/{self.sample_id}-{self.meta_id}/"
                                 try:
                                     remote_file_list_to_delete = con_sftp.listdir(path=remote_path)
                                     for file in remote_file_list_to_delete:
@@ -487,7 +487,7 @@ class sub_form(QtWidgets.QMainWindow):
                 simple = self.current_mode_metadata_category_info_df["simple"][0]
                 default_download_name = self.get_default_download_name()
                 if simple:
-                    remote_path = f"/ammd_DB_FTP/{mode}/{tag}.csv"
+                    remote_path = f"/TFDB_drive/{mode}/{tag}.csv"
                     local_path = QFileDialog.getSaveFileName(self, "Data download", default_download_name, f"CSV file (*.csv)")[0]
                     if local_path:
                         try:
@@ -496,7 +496,7 @@ class sub_form(QtWidgets.QMainWindow):
                         except:
                             self.error_dialog.showMessage(str(sys.exc_info()))
                 else:
-                    remote_directory = f"/ammd_DB_FTP/{mode}/{tag}/"
+                    remote_directory = f"/TFDB_drive/{mode}/{tag}/"
                     try:
                         remote_file_list = con_sftp.listdir(remote_directory)
                     except:

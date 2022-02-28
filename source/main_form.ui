@@ -1,0 +1,5969 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1165</width>
+    <height>539</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AMMD DB</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QWidget" name="left_panel_widget" native="true">
+      <property name="styleSheet">
+       <string notr="true">background-color: #262626</string>
+      </property>
+      <layout class="QVBoxLayout" name="left_panel">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <spacer name="left_panel_vertical_spacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="left_panel_icon_label">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>190</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>LOGO_resize_small.png</pixmap>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="left_panel_vertical_spacer_1">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>10</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="left_panel_tab_button_0">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Yu Gothic UI Semibold</family>
+           <pointsize>18</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+background-color: #262626;
+color:white;
+border:none;
+}
+QPushButton:hover{
+background-color: #323232;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+         </property>
+         <property name="text">
+          <string>Logbook</string>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="left_panel_tab_button_1">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Yu Gothic UI Semibold</family>
+           <pointsize>18</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+background-color: #262626;
+color:white;
+border:none;
+}
+QPushButton:hover{
+background-color: #323232;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+         </property>
+         <property name="text">
+          <string>Search</string>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="left_panel_tab_button_2">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Yu Gothic UI Semibold</family>
+           <pointsize>18</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+background-color: #262626;
+color:white;
+border:none;
+}
+QPushButton:hover{
+background-color: #323232;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+         </property>
+         <property name="text">
+          <string>Upload</string>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="left_panel_summary_button">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Yu Gothic UI Semibold</family>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+background-color: #262626;
+color:white;
+border:none;
+}
+QPushButton:hover{
+background-color: #323232;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+         </property>
+         <property name="text">
+          <string>Summary</string>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="left_panel_summary_edit">
+         <property name="font">
+          <font>
+           <family>Yu Gothic UI</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #FFFFFF;</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="left_panel_vertical_spacer_0">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="left_panel_tab_button_3">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Yu Gothic UI Semibold</family>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+background-color: #262626;
+color:white;
+border:none;
+}
+QPushButton:hover{
+background-color: #323232;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+         </property>
+         <property name="text">
+          <string>user</string>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>10</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="main_stacked_widget">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="palette">
+       <palette>
+        <active>
+         <colorrole role="Button">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Base">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Window">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </active>
+        <inactive>
+         <colorrole role="Button">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Base">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Window">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </inactive>
+        <disabled>
+         <colorrole role="Button">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Base">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Window">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </disabled>
+       </palette>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #FFFFFF</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="currentIndex">
+       <number>4</number>
+      </property>
+      <widget class="QWidget" name="logbook_tab">
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="logbook_current_page_edit">
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>60</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>1</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1" colspan="4">
+         <widget class="QLineEdit" name="sample_meta_comment">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QLabel" name="logbook_total_page_label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>20</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>52</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>60</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>/</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="6">
+         <layout class="QGridLayout" name="sample_meta_grid">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetFixedSize</enum>
+          </property>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="sample_meta_label_24">
+          <property name="text">
+           <string>Comment</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="5">
+         <widget class="QPushButton" name="logbook_reset_button">
+          <property name="maximumSize">
+           <size>
+            <width>75</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Reset</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QPushButton" name="logbook_prev_button">
+          <property name="maximumSize">
+           <size>
+            <width>75</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Prev</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="4">
+         <spacer name="logbook_horizontal_spacer_0">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>697</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="2" column="5">
+         <widget class="QPushButton" name="logbook_save_button">
+          <property name="text">
+           <string>Save</string>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="7">
+         <widget class="QTableView" name="logbook_table_view">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QAbstractScrollArea::AdjustToContents</enum>
+          </property>
+          <property name="autoScroll">
+           <bool>true</bool>
+          </property>
+          <property name="dragEnabled">
+           <bool>true</bool>
+          </property>
+          <property name="dragDropMode">
+           <enum>QAbstractItemView::DragDrop</enum>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="verticalScrollMode">
+           <enum>QAbstractItemView::ScrollPerPixel</enum>
+          </property>
+          <property name="horizontalScrollMode">
+           <enum>QAbstractItemView::ScrollPerPixel</enum>
+          </property>
+          <property name="gridStyle">
+           <enum>Qt::SolidLine</enum>
+          </property>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+         </widget>
+        </item>
+        <item row="4" column="3">
+         <widget class="QPushButton" name="logbook_next_button">
+          <property name="maximumSize">
+           <size>
+            <width>75</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Next</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="6">
+         <widget class="QWidget" name="widget_2" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: #dddddd;</string>
+          </property>
+          <widget class="QLabel" name="sample_meta_label_project">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>10</y>
+             <width>111</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: FFFFFF</string>
+           </property>
+           <property name="text">
+            <string>Project</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="sample_meta_project">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>10</y>
+             <width>176</width>
+             <height>18</height>
+            </rect>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #FFFFFF;</string>
+           </property>
+           <property name="editable">
+            <bool>false</bool>
+           </property>
+           <property name="frame">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="sample_meta_label_date">
+           <property name="geometry">
+            <rect>
+             <x>320</x>
+             <y>10</y>
+             <width>127</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: FFFFFF</string>
+           </property>
+           <property name="text">
+            <string>Date (YYYY/MM/DD/)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="sample_meta_date">
+           <property name="geometry">
+            <rect>
+             <x>450</x>
+             <y>10</y>
+             <width>129</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #FFFFFF;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="sample_meta_label_experimenter">
+           <property name="geometry">
+            <rect>
+             <x>580</x>
+             <y>10</y>
+             <width>107</width>
+             <height>18</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: FFFFFF</string>
+           </property>
+           <property name="text">
+            <string>Person</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="sample_meta_experimenter">
+           <property name="geometry">
+            <rect>
+             <x>700</x>
+             <y>10</y>
+             <width>229</width>
+             <height>18</height>
+            </rect>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #FFFFFF;</string>
+           </property>
+           <property name="editable">
+            <bool>false</bool>
+           </property>
+           <property name="frame">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="search_tab">
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="1" column="7">
+         <widget class="QPushButton" name="search_search_button">
+          <property name="text">
+           <string>Search</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="5" colspan="2">
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>697</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="5" column="4">
+         <widget class="QPushButton" name="nextButtonSearch">
+          <property name="maximumSize">
+           <size>
+            <width>75</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Next</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QPushButton" name="prevButtonSearch">
+          <property name="maximumSize">
+           <size>
+            <width>75</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Prev</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="8">
+         <widget class="QTableView" name="search_result">
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QAbstractScrollArea::AdjustToContents</enum>
+          </property>
+          <property name="autoScroll">
+           <bool>true</bool>
+          </property>
+          <property name="dragEnabled">
+           <bool>true</bool>
+          </property>
+          <property name="dragDropMode">
+           <enum>QAbstractItemView::DragDrop</enum>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="textElideMode">
+           <enum>Qt::ElideLeft</enum>
+          </property>
+          <property name="verticalScrollMode">
+           <enum>QAbstractItemView::ScrollPerPixel</enum>
+          </property>
+          <property name="horizontalScrollMode">
+           <enum>QAbstractItemView::ScrollPerPixel</enum>
+          </property>
+          <property name="gridStyle">
+           <enum>Qt::SolidLine</enum>
+          </property>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+         </widget>
+        </item>
+        <item row="5" column="3">
+         <widget class="QLabel" name="SearchTotalPage">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>20</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>52</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>60</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>/</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="6">
+         <widget class="QLineEdit" name="search_search_bar_edit">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="9">
+         <widget class="QStackedWidget" name="periodic_table">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>900</width>
+            <height>211</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>211</height>
+           </size>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::StrongFocus</enum>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="periodic_tablePage1">
+           <widget class="QWidget" name="gridLayoutWidget_2">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>10</y>
+              <width>581</width>
+              <height>181</height>
+             </rect>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_2">
+             <property name="leftMargin">
+              <number>3</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>3</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <property name="spacing">
+              <number>3</number>
+             </property>
+             <item row="6" column="10">
+              <widget class="QPushButton" name="search_period_Au">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Au</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="12">
+              <widget class="QPushButton" name="search_period_Al">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Al</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="8">
+              <widget class="QPushButton" name="search_period_Ir">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Ir</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="15">
+              <widget class="QPushButton" name="search_period_Po">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Po</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="11">
+              <widget class="QPushButton" name="search_period_Hg">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Hg</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="15">
+              <widget class="QPushButton" name="search_period_Te">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Te</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="0">
+              <widget class="QPushButton" name="search_period_Cs">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Cs</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="3">
+              <widget class="QPushButton" name="search_period_Ti">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Ti</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="4">
+              <widget class="QPushButton" name="search_period_Ta">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Ta</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QPushButton" name="search_period_Be">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Be</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="9">
+              <widget class="QPushButton" name="search_period_Ni">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Ni</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="13">
+              <widget class="QPushButton" name="search_period_Ge">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Ge</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="15">
+              <widget class="QPushButton" name="search_period_Se">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Se</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="14">
+              <widget class="QPushButton" name="search_period_As">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>As</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="2">
+              <widget class="QPushButton" name="search_period_Sc">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Sc</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="14">
+              <widget class="QPushButton" name="search_period_P">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>P</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="17">
+              <widget class="QPushButton" name="search_period_Kr">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Kr</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="5">
+              <widget class="QPushButton" name="search_period_Cr">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Cr</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="7">
+              <widget class="QPushButton" name="search_period_Fe">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Fe</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="8">
+              <widget class="QPushButton" name="search_period_Co">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Co</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="13">
+              <widget class="QPushButton" name="search_period_C">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>C</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="17">
+              <widget class="QPushButton" name="search_period_Ne">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Ne</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="11">
+              <widget class="QPushButton" name="search_period_Cd">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Cd</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="12">
+              <widget class="QPushButton" name="search_period_In">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>In</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="8">
+              <widget class="QPushButton" name="search_period_Rh">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Rh</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="5">
+              <widget class="QPushButton" name="search_period_W">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>W</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QPushButton" name="search_period_Li">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Li</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="17">
+              <widget class="QPushButton" name="search_period_Xe">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Xe</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="16">
+              <widget class="QPushButton" name="search_period_Cl">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Cl</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="3">
+              <widget class="QPushButton" name="search_period_Zr">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Zr</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="17">
+              <widget class="QPushButton" name="search_period_He">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>He</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="14">
+              <widget class="QPushButton" name="search_period_Bi">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Bi</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="3">
+              <widget class="QPushButton" name="search_period_Hf">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Hf</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="17">
+              <widget class="QPushButton" name="search_period_Rn">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Rn</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="1">
+              <widget class="QPushButton" name="search_period_Sr">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Sr</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QPushButton" name="search_period_K">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>K</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="16">
+              <widget class="QPushButton" name="search_period_I">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>I</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="12">
+              <widget class="QPushButton" name="search_period_B">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>B</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="14">
+              <widget class="QPushButton" name="search_period_N">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>N</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="4">
+              <widget class="QPushButton" name="search_period_Nb">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Nb</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="12">
+              <widget class="QPushButton" name="search_period_Tl">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Tl</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="0">
+              <widget class="QPushButton" name="search_period_Rb">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Rb</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QPushButton" name="search_period_Na">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Na</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="16">
+              <widget class="QPushButton" name="search_period_F">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>F</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="13">
+              <widget class="QPushButton" name="search_period_Pb">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Pb</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="4">
+              <widget class="QPushButton" name="search_period_V">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>V</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="15">
+              <widget class="QPushButton" name="search_period_S">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>S</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="13">
+              <widget class="QPushButton" name="search_period_Sn">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Sn</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="17">
+              <widget class="QPushButton" name="search_period_Ar">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Ar</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="16">
+              <widget class="QPushButton" name="search_period_At">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>At</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="12">
+              <widget class="QPushButton" name="search_period_Ga">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Ga</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="10">
+              <widget class="QPushButton" name="search_period_Cu">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Cu</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="14">
+              <widget class="QPushButton" name="search_period_Sb">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Sb</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="9">
+              <widget class="QPushButton" name="search_period_Pd">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Pd</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="1">
+              <widget class="QPushButton" name="search_period_Ba">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Ba</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QPushButton" name="search_period_Mg">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Mg</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="7">
+              <widget class="QPushButton" name="search_period_Os">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Os</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="5">
+              <widget class="QPushButton" name="search_period_Mo">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Mo</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="13">
+              <widget class="QPushButton" name="search_period_Si">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Si</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="6">
+              <widget class="QPushButton" name="search_period_Tc">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Tc</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="10">
+              <widget class="QPushButton" name="search_period_Ag">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Ag</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="11">
+              <widget class="QPushButton" name="search_period_Zn">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Zn</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="9">
+              <widget class="QPushButton" name="search_period_Pt">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Pt</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QPushButton" name="search_period_H">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>H</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="7">
+              <widget class="QPushButton" name="search_period_Ru">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Ru</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="6">
+              <widget class="QPushButton" name="search_period_Mn">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Mn</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="6">
+              <widget class="QPushButton" name="search_period_Re">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Re</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="15">
+              <widget class="QPushButton" name="search_period_O">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>O</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QPushButton" name="search_period_Ca">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Ca</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="2">
+              <widget class="QPushButton" name="search_period_Y">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Y</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="16">
+              <widget class="QPushButton" name="search_period_Br">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Br</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="9" colspan="2">
+              <widget class="QPushButton" name="search_period_Clear">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Clear</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="page">
+           <widget class="QWidget" name="gridLayoutWidget_3">
+            <property name="geometry">
+             <rect>
+              <x>690</x>
+              <y>10</y>
+              <width>161</width>
+              <height>181</height>
+             </rect>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_3">
+             <property name="leftMargin">
+              <number>3</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>3</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <property name="spacing">
+              <number>3</number>
+             </property>
+             <item row="3" column="4">
+              <widget class="QPushButton" name="search_period_6">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>6</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="4">
+              <widget class="QPushButton" name="search_period_3">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>3</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="3">
+              <widget class="QPushButton" name="search_period_Te_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>8</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="3">
+              <widget class="QPushButton" name="search_period_5">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>5</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="2">
+              <widget class="QPushButton" name="search_period_7">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>7</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="2">
+              <widget class="QPushButton" name="search_period_4">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>4</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="2">
+              <widget class="QPushButton" name="search_period_1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>1</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="2">
+              <widget class="QPushButton" name="search_period_0">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="3">
+              <widget class="QPushButton" name="search_period_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>2</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="4">
+              <widget class="QPushButton" name="search_period_9">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>9</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="3" colspan="2">
+              <widget class="QPushButton" name="search_period_Clear_id">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: #c5c5c5;
+border:none;
+}
+QPushButton:hover{
+background-color: #9d9d9d
+;
+}
+QPushButton:disabled{
+background-color: #FFFFFF;
+color: #262626;
+}</string>
+               </property>
+               <property name="text">
+                <string>Clear</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+        <item row="5" column="2">
+         <widget class="QLineEdit" name="SearchCurrentPage">
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>60</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>1</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3" colspan="2">
+         <widget class="QPushButton" name="search_option_btn">
+          <property name="minimumSize">
+           <size>
+            <width>90</width>
+            <height>23</height>
+           </size>
+          </property>
+          <property name="sizeIncrement">
+           <size>
+            <width>40</width>
+            <height>23</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background-color: #262626;color:white;border:none;
+}
+QPushButton:hover{
+background-color: #323232;
+}</string>
+          </property>
+          <property name="text">
+           <string>Search Option</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="3">
+         <widget class="QComboBox" name="search_search_type_combo">
+          <item>
+           <property name="text">
+            <string>Composition</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ID</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Project</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Person</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="upload_tab">
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+        <item row="0" column="5">
+         <widget class="QLineEdit" name="upload_file_directory">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QWidget" name="widget" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <layout class="QFormLayout" name="upload_meta_form_layout">
+             <property name="sizeConstraint">
+              <enum>QLayout::SetDefaultConstraint</enum>
+             </property>
+             <property name="fieldGrowthPolicy">
+              <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+             </property>
+             <property name="horizontalSpacing">
+              <number>6</number>
+             </property>
+             <property name="verticalSpacing">
+              <number>6</number>
+             </property>
+             <property name="leftMargin">
+              <number>9</number>
+             </property>
+             <property name="topMargin">
+              <number>9</number>
+             </property>
+             <property name="rightMargin">
+              <number>9</number>
+             </property>
+             <property name="bottomMargin">
+              <number>9</number>
+             </property>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="5" rowspan="2" colspan="2">
+         <widget class="QWebEngineView" name="upload_plot_view" native="true"/>
+        </item>
+        <item row="0" column="0" colspan="2">
+         <widget class="QComboBox" name="upload_mode_combobox"/>
+        </item>
+        <item row="2" column="3" alignment="Qt::AlignRight">
+         <widget class="QPushButton" name="upload_save_button">
+          <property name="minimumSize">
+           <size>
+            <width>75</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>75</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Save</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="3">
+         <widget class="QProgressBar" name="upload_progress_bar">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2" colspan="2">
+         <widget class="QListView" name="upload_file_list_view">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="viewMode">
+           <enum>QListView::ListMode</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2" colspan="2">
+         <widget class="QPushButton" name="upload_load_button">
+          <property name="text">
+           <string>Load File(s)</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_3">
+       <layout class="QGridLayout" name="gridLayout_13">
+        <item row="7" column="12">
+         <widget class="QPushButton" name="manage_sample_apply_button">
+          <property name="text">
+           <string>Apply</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="10">
+         <spacer name="horizontalSpacer_9">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>276</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="4" column="2">
+         <widget class="QPushButton" name="manage_project_apply_button">
+          <property name="text">
+           <string>Apply</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Project</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="4" rowspan="4" colspan="9">
+         <widget class="QTableWidget" name="manage_sample_table_widget">
+          <property name="minimumSize">
+           <size>
+            <width>700</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="dragDropMode">
+           <enum>QAbstractItemView::NoDragDrop</enum>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="9">
+         <widget class="QPushButton" name="manage_sample_delete_row_button">
+          <property name="text">
+           <string>Delete Row</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QPushButton" name="manage_project_delete_row_button">
+          <property name="text">
+           <string>Delete Row</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="4">
+         <widget class="QTableWidget" name="manage_project_table_widget">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>205</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QAbstractScrollArea::AdjustToContents</enum>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QPushButton" name="manage_project_add_row_button">
+          <property name="text">
+           <string>Add Row</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <widget class="QPushButton" name="manage_person_add_row_button">
+          <property name="text">
+           <string>Add Row</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0" colspan="4">
+         <widget class="QTableWidget" name="manage_person_table_widget">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>205</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QAbstractScrollArea::AdjustToContents</enum>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="2">
+         <widget class="QPushButton" name="manage_person_apply_button">
+          <property name="text">
+           <string>Apply</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4">
+         <widget class="QLabel" name="label_11">
+          <property name="text">
+           <string>Sample</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="4" colspan="5">
+         <widget class="QPushButton" name="manage_sample_add_row_button">
+          <property name="text">
+           <string>Add Row</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <widget class="QPushButton" name="manage_person_delete_row_button">
+          <property name="text">
+           <string>Delete Row</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Person</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="12">
+         <widget class="QPushButton" name="manage_property_manage_button">
+          <property name="text">
+           <string>property_manage</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="5" colspan="6">
+         <spacer name="horizontalSpacer_10">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>564</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="manage_tab">
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="4" column="4">
+         <widget class="QPushButton" name="manage_cancel_button">
+          <property name="text">
+           <string>Cancel</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>607</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="4" column="5">
+         <widget class="QPushButton" name="manage_apply_button">
+          <property name="text">
+           <string>Apply</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QPushButton" name="manage_add_new_database_button">
+          <property name="text">
+           <string>Add New DB</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QPushButton" name="manage_delete_row_button">
+          <property name="text">
+           <string>Delete Row</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QPushButton" name="manage_add_row_button">
+          <property name="text">
+           <string>Add Row</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="6">
+         <widget class="QWidget" name="widget_3" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>80</height>
+           </size>
+          </property>
+          <widget class="QRadioButton" name="manage_radio_simple">
+           <property name="geometry">
+            <rect>
+             <x>110</x>
+             <y>50</y>
+             <width>90</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Simple</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="manage_radio_locational">
+           <property name="geometry">
+            <rect>
+             <x>200</x>
+             <y>50</y>
+             <width>90</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Locational</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="manage_radio_unristricted">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>50</y>
+             <width>90</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Unristricted</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="manage_data_type_edit">
+           <property name="geometry">
+            <rect>
+             <x>105</x>
+             <y>20</y>
+             <width>101</width>
+             <height>20</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>20</y>
+             <width>71</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Data type:</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="manage_extension_edit">
+           <property name="geometry">
+            <rect>
+             <x>295</x>
+             <y>20</y>
+             <width>331</width>
+             <height>20</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_2">
+           <property name="geometry">
+            <rect>
+             <x>220</x>
+             <y>20</y>
+             <width>71</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Extension:</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_3">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>50</y>
+             <width>71</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Category:</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="2">
+         <widget class="QComboBox" name="manage_metadata_combo"/>
+        </item>
+        <item row="3" column="0" colspan="6">
+         <widget class="QTableWidget" name="manage_table_widget">
+          <property name="dragDropMode">
+           <enum>QAbstractItemView::NoDragDrop</enum>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2" colspan="2">
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>611</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_2"/>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebEngineView</class>
+   <extends>QWidget</extends>
+   <header>qwebengineview.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>left_panel_tab_button_1</tabstop>
+  <tabstop>left_panel_tab_button_2</tabstop>
+  <tabstop>search_period_C</tabstop>
+  <tabstop>search_period_He</tabstop>
+  <tabstop>search_period_Li</tabstop>
+  <tabstop>search_period_F</tabstop>
+  <tabstop>search_period_Ne</tabstop>
+  <tabstop>search_period_Na</tabstop>
+  <tabstop>search_period_Mg</tabstop>
+  <tabstop>search_period_Ar</tabstop>
+  <tabstop>search_period_Cr</tabstop>
+  <tabstop>sample_meta_comment</tabstop>
+  <tabstop>logbook_save_button</tabstop>
+  <tabstop>search_period_Xe</tabstop>
+  <tabstop>search_period_Cs</tabstop>
+  <tabstop>search_period_Ba</tabstop>
+  <tabstop>search_period_Hf</tabstop>
+  <tabstop>search_period_Ta</tabstop>
+  <tabstop>search_period_W</tabstop>
+  <tabstop>search_period_Re</tabstop>
+  <tabstop>search_period_Os</tabstop>
+  <tabstop>search_period_Ir</tabstop>
+  <tabstop>search_period_Pt</tabstop>
+  <tabstop>search_period_Au</tabstop>
+  <tabstop>search_period_Hg</tabstop>
+  <tabstop>search_period_Tl</tabstop>
+  <tabstop>search_period_Pb</tabstop>
+  <tabstop>search_period_Bi</tabstop>
+  <tabstop>search_period_Po</tabstop>
+  <tabstop>search_period_At</tabstop>
+  <tabstop>search_period_Rn</tabstop>
+  <tabstop>search_period_Ni</tabstop>
+  <tabstop>search_period_As</tabstop>
+  <tabstop>search_period_H</tabstop>
+  <tabstop>search_period_K</tabstop>
+  <tabstop>search_period_N</tabstop>
+  <tabstop>search_period_Al</tabstop>
+  <tabstop>search_period_Se</tabstop>
+  <tabstop>search_period_Cu</tabstop>
+  <tabstop>search_period_Sc</tabstop>
+  <tabstop>search_period_Ca</tabstop>
+  <tabstop>search_period_Ti</tabstop>
+  <tabstop>search_period_Cl</tabstop>
+  <tabstop>search_period_Ga</tabstop>
+  <tabstop>search_period_Kr</tabstop>
+  <tabstop>search_period_Br</tabstop>
+  <tabstop>search_period_V</tabstop>
+  <tabstop>search_period_S</tabstop>
+  <tabstop>search_period_Si</tabstop>
+  <tabstop>logbook_table_view</tabstop>
+  <tabstop>search_period_Ge</tabstop>
+  <tabstop>search_period_Co</tabstop>
+  <tabstop>logbook_prev_button</tabstop>
+  <tabstop>logbook_next_button</tabstop>
+  <tabstop>logbook_reset_button</tabstop>
+  <tabstop>logbook_current_page_edit</tabstop>
+  <tabstop>search_period_Zn</tabstop>
+  <tabstop>search_period_P</tabstop>
+  <tabstop>search_period_Nb</tabstop>
+  <tabstop>search_period_Rb</tabstop>
+  <tabstop>search_period_Pd</tabstop>
+  <tabstop>search_period_Cd</tabstop>
+  <tabstop>search_period_In</tabstop>
+  <tabstop>search_period_Sn</tabstop>
+  <tabstop>search_period_Tc</tabstop>
+  <tabstop>left_panel_summary_button</tabstop>
+  <tabstop>left_panel_summary_edit</tabstop>
+  <tabstop>search_period_Be</tabstop>
+  <tabstop>search_period_Mn</tabstop>
+  <tabstop>search_period_Fe</tabstop>
+  <tabstop>search_period_O</tabstop>
+  <tabstop>left_panel_tab_button_0</tabstop>
+  <tabstop>search_period_B</tabstop>
+  <tabstop>nextButtonSearch</tabstop>
+  <tabstop>search_search_button</tabstop>
+  <tabstop>search_search_type_combo</tabstop>
+  <tabstop>prevButtonSearch</tabstop>
+  <tabstop>search_search_bar_edit</tabstop>
+  <tabstop>search_option_btn</tabstop>
+  <tabstop>periodic_table</tabstop>
+  <tabstop>search_result</tabstop>
+  <tabstop>search_period_Mo</tabstop>
+  <tabstop>search_period_Zr</tabstop>
+  <tabstop>search_period_Y</tabstop>
+  <tabstop>search_period_Sr</tabstop>
+  <tabstop>search_period_Sb</tabstop>
+  <tabstop>search_period_I</tabstop>
+  <tabstop>search_period_Ag</tabstop>
+  <tabstop>search_period_Te</tabstop>
+  <tabstop>search_period_Ru</tabstop>
+  <tabstop>search_period_Rh</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>logbook_save_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>logbook_save_button_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1141</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>13</x>
+     <y>351</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>logbook_prev_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>logbook_prev_button_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>208</x>
+     <y>516</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>144</x>
+     <y>482</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>logbook_next_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>logbook_next_button_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>413</x>
+     <y>516</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>123</x>
+     <y>499</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>logbook_reset_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>logbook_reset()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1069</x>
+     <y>516</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>159</x>
+     <y>512</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_option_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>periodic_table_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>484</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>132</x>
+     <y>490</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>prevButtonSearch</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>search_prev_page()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>265</x>
+     <y>526</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>95</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>nextButtonSearch</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>search_next_page()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>476</x>
+     <y>526</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>139</x>
+     <y>460</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_result</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>open_sample_window(QModelIndex)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>458</x>
+     <y>273</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>149</x>
+     <y>388</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>upload_mode_combobox</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>upload_mode_combobox_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>265</x>
+     <y>15</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>170</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>upload_load_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>upload_load_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>497</x>
+     <y>16</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>469</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>upload_file_list_view</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>upload_file_list_view_double_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>569</x>
+     <y>433</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>535</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>upload_save_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>upload_save_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>604</x>
+     <y>526</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>350</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_search_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>search_search_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1100</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1152</x>
+     <y>212</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_search_bar_edit</sender>
+   <signal>returnPressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>search_search_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>676</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1152</x>
+     <y>112</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_search_type_combo</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>search_search_type_compo_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>231</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>86</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_0</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>916</x>
+     <y>210</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>311</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Clear_id</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>965</x>
+     <y>205</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>464</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_1</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>927</x>
+     <y>176</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>487</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>972</x>
+     <y>159</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>463</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1020</x>
+     <y>172</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>316</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_4</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>934</x>
+     <y>115</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>441</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_5</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>972</x>
+     <y>123</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>525</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_6</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1037</x>
+     <y>112</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>255</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_7</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>928</x>
+     <y>74</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>479</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Te_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>966</x>
+     <y>75</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_9</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1027</x>
+     <y>66</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_H</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>491</x>
+     <y>51</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>298</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Li</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>488</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>295</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Na</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>484</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>298</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_K</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>490</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Rb</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>492</x>
+     <y>189</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>296</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Cs</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>477</x>
+     <y>208</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>293</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Be</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>524</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>334</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Mg</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>525</x>
+     <y>120</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>328</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Ca</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>523</x>
+     <y>153</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>328</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Sr</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>522</x>
+     <y>187</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>327</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Ba</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>516</x>
+     <y>211</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>317</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Sc</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>155</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>357</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Y</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>549</x>
+     <y>177</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>355</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Ti</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>586</x>
+     <y>145</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>382</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Zr</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>589</x>
+     <y>185</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>388</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Hf</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>593</x>
+     <y>212</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>378</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_V</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>621</x>
+     <y>152</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>417</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Nb</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>617</x>
+     <y>189</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>410</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Ta</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>614</x>
+     <y>212</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>410</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Cr</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>652</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>456</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Mo</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>658</x>
+     <y>183</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>450</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_W</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>642</x>
+     <y>219</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>459</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Mn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>152</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>492</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Tc</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>688</x>
+     <y>185</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>490</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Re</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>677</x>
+     <y>214</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>475</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Fe</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>708</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>514</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Ru</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>720</x>
+     <y>174</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>525</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Os</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>712</x>
+     <y>216</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>510</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Co</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>738</x>
+     <y>159</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>550</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Rh</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>755</x>
+     <y>188</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>546</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Ir</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>747</x>
+     <y>214</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>551</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Ni</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>767</x>
+     <y>154</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>587</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Pd</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>785</x>
+     <y>187</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>571</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Pt</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>767</x>
+     <y>209</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>579</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Clear</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>798</x>
+     <y>70</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>591</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Cu</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>804</x>
+     <y>157</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>609</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Ag</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>812</x>
+     <y>188</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>608</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Au</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>806</x>
+     <y>215</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>626</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Zn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>853</x>
+     <y>157</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>647</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Cd</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>829</x>
+     <y>188</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>644</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Hg</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>843</x>
+     <y>211</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>670</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_B</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>873</x>
+     <y>92</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>679</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Al</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>871</x>
+     <y>124</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>664</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Ga</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>875</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>678</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_In</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>877</x>
+     <y>184</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>886</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Tl</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>866</x>
+     <y>216</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1015</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_C</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>906</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1065</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Si</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>907</x>
+     <y>124</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1098</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Ge</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>903</x>
+     <y>159</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>711</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Sn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>918</x>
+     <y>173</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>722</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Pb</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>897</x>
+     <y>217</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>701</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_N</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>944</x>
+     <y>94</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>744</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_P</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>934</x>
+     <y>113</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>741</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_As</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>938</x>
+     <y>154</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>753</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Sb</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>945</x>
+     <y>182</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>735</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Bi</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>932</x>
+     <y>211</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>748</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_O</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>961</x>
+     <y>96</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>777</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_S</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>972</x>
+     <y>126</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>777</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Se</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>973</x>
+     <y>155</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>774</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Te</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>976</x>
+     <y>175</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>778</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Po</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>962</x>
+     <y>216</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>758</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_F</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1003</x>
+     <y>83</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>804</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Cl</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1006</x>
+     <y>130</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>813</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Br</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>992</x>
+     <y>146</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>808</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_I</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1002</x>
+     <y>170</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>811</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_At</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1008</x>
+     <y>212</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>361</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_He</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1031</x>
+     <y>61</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>845</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Ne</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1041</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>838</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Ar</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1023</x>
+     <y>130</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>837</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Kr</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1042</x>
+     <y>149</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>877</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Xe</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1034</x>
+     <y>180</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>955</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_period_Rn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_composition_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1041</x>
+     <y>211</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>964</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>logbook_table_view</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>logbook_table_view_double_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>427</x>
+     <y>417</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>444</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>manage_metadata_combo</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>manage_metadata_combo_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>253</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>247</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>manage_add_row_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>manage_add_row_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>238</x>
+     <y>523</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>225</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>manage_delete_row_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>manage_delete_row_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>315</x>
+     <y>517</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>manage_apply_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>manage_apply_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1112</x>
+     <y>521</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1102</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>manage_add_new_database_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>manage_add_new_database_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1040</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1039</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>left_panel_summary_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>left_panel_summary_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>145</x>
+     <y>322</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>left_panel_tab_button_0</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>panel_tab_buttons_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>71</x>
+     <y>159</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>left_panel_tab_button_1</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>panel_tab_buttons_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>143</x>
+     <y>219</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>180</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>left_panel_tab_button_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>panel_tab_buttons_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>148</x>
+     <y>271</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>manage_radio_simple</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>manage_simple_radio_button_toggled()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>350</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>350</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>manage_project_add_row_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>manage_general_add_row_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>255</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>manage_person_add_row_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>manage_general_add_row_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>228</x>
+     <y>524</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>228</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>manage_sample_add_row_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>manage_general_add_row_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>522</x>
+     <y>526</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>574</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>manage_project_delete_row_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>manage_general_delete_row_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>328</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>391</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>manage_person_delete_row_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>manage_general_delete_row_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>312</x>
+     <y>524</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>manage_sample_delete_row_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>manage_general_delete_row_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>603</x>
+     <y>526</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>661</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>manage_project_apply_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>manage_general_apply_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>435</x>
+     <y>268</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>543</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>manage_person_apply_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>manage_general_apply_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>435</x>
+     <y>526</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>484</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>manage_sample_apply_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>manage_general_apply_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1101</x>
+     <y>513</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1097</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>left_panel_tab_button_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>panel_tab_buttons_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>106</x>
+     <y>508</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>110</x>
+     <y>648</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>manage_cancel_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>manage_cancel_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1049</x>
+     <y>507</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1007</x>
+     <y>646</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>manage_property_manage_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>manage_property_manage_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1123</x>
+     <y>15</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1158</x>
+     <y>-47</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <signal>signal1()</signal>
+  <slot>logbook_save_button_clicked()</slot>
+  <slot>slot2()</slot>
+  <slot>dataformLayout_set()</slot>
+  <slot>ListViewClick()</slot>
+  <slot>FileDirectory()</slot>
+  <slot>upload_save_button_clicked()</slot>
+  <slot>logbook_prev_button_click()</slot>
+  <slot>logbook_next_button_click()</slot>
+  <slot>logbook_reset()</slot>
+  <slot>periodic_table_click()</slot>
+  <slot>search_prev_page()</slot>
+  <slot>search_next_page()</slot>
+  <slot>open_sample_window(QModelIndex)</slot>
+  <slot>panel_tab_buttons_clicked()</slot>
+  <slot>left_panel_summary_button_clicked()</slot>
+  <slot>upload_mode_combobox_changed()</slot>
+  <slot>temppbck()</slot>
+  <slot>upload_load_button_clicked()</slot>
+  <slot>tempclicked()</slot>
+  <slot>tempdoubleclicked()</slot>
+  <slot>upload_file_list_view_double_clicked()</slot>
+  <slot>search_search_button_clicked()</slot>
+  <slot>sample_composition_button_clicked()</slot>
+  <slot>search_search_type_compo_changed()</slot>
+  <slot>logbook_table_view_double_clicked()</slot>
+  <slot>manage_metadata_combo_changed()</slot>
+  <slot>manage_add_row_button_clicked()</slot>
+  <slot>manage_delete_row_button_clicked()</slot>
+  <slot>manage_apply_button_clicked()</slot>
+  <slot>manage_add_new_database_button_clicked()</slot>
+  <slot>manage_simple_radio_button_toggled()</slot>
+  <slot>manage_general_add_row_button_clicked()</slot>
+  <slot>manage_general_delete_row_button_clicked()</slot>
+  <slot>manage_general_apply_button_clicked()</slot>
+  <slot>test_button()</slot>
+  <slot>manage_cancel_button_clicked()</slot>
+  <slot>manage_property_manage_button_clicked()</slot>
+ </slots>
+</ui>

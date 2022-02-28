@@ -132,7 +132,7 @@ def upload_data_to_sftp(connector_SQL, connector_sftp, mode, directory, id_sampl
         full_path = full_path_list[0]
         extension = os.path.splitext(full_path)[1]
         remote_file_name = f"{id_sample}-{id_metadata}{extension}"
-        remote_path = f"/ammd_DB_FTP/{mode}/{remote_file_name}"
+        remote_path = f"/TFDB_drive/{mode}/{remote_file_name}"
         try:
             connector_sftp.put(full_path, remote_path)
             connector_sftp.stat(remote_path)
@@ -143,7 +143,7 @@ def upload_data_to_sftp(connector_SQL, connector_sftp, mode, directory, id_sampl
             return False, exception_message
     else:
         try:
-            remote_directory = f"/ammd_DB_FTP/{mode}/{id_sample}-{id_metadata}"
+            remote_directory = f"/TFDB_drive/{mode}/{id_sample}-{id_metadata}"
             connector_sftp.mkdir(remote_directory)
             total_num = len(full_path_list)
             for i in range(total_num):
@@ -212,12 +212,6 @@ def delete_metadata_from_MySQL(connector, mode, id_metadata, delete_authority):
         return exception_message
     return 1
 
-def remove_dir(con_SQL, remote_path):
-    remote_file_list_to_delete = con_sftp.listdir(path=remote_path)
-    for file in remote_file_list_to_delete:
-        con_sftp.remove(remote_path + file)
-    con_sftp.rmdir(remote_path)
-
 def delete_sample_by_id(con_SQL, con_sftp, id_sample, properties, single_list):
     for i in range(len(properties)):
         mode = properties[i]
@@ -225,7 +219,7 @@ def delete_sample_by_id(con_SQL, con_sftp, id_sample, properties, single_list):
         success, file_list = get_file_list(con_sftp, mode)
         for file_name in file_list:
             if file_name.startswith(f"{id_sample}-"):
-                remote_path = f"/ammd_DB_FTP/{mode}/{file_name}"
+                remote_path = f"/TFDB_drive/{mode}/{file_name}"
                 try:
                     if single:
                         con_sftp.remove(remote_path)
@@ -372,7 +366,7 @@ def advanced_search(con_sql, search_keyword, search_type, mode_list, page=1, row
 
 def get_file_list(connector_sftp, mode):
     try:
-        lst = connector_sftp.listdir(f"/ammd_DB_FTP/{mode}")
+        lst = connector_sftp.listdir(f"/TFDB_drive/{mode}")
         return 1, lst
     except:
         return 0, str(sys.exc_info())
