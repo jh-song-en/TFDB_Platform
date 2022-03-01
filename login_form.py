@@ -67,7 +67,8 @@ class LoginForm(QtWidgets.QWidget):
         self.system_config["MySQL_host"] = self.mysql_host_edit.text()
         self.system_config["MySQL_port"] =  self.mysql_port_edit.text()
         self.system_config["SFTP_host"] = self.sftp_host_edit.text()
-        self.system_config["SFTP_port"] =self.sftp_port_edit.text()
+        self.system_config["SFTP_port"] = self.sftp_port_edit.text()
+        self.set_system_config()
         with open(os.path.abspath('source/system_config.json'), "w") as f:
             json.dump(self.system_config, f)
         self.login_form_stacked_widget.setCurrentIndex(0)

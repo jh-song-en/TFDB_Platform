@@ -758,9 +758,13 @@ class main_form(QtWidgets.QMainWindow):
 
     def manage_init(self):
         # self.manage_initial_function()
+        print("Hello")
         self.get_current_info_table("Project")
+        print("here")
         self.get_current_info_table("Person")
+        print("Done")
         self.get_current_info_table("Sample")
+        print("done")
 
     def get_current_info_table(self, mode, only_df=False):
         if mode == "Project":
@@ -772,6 +776,7 @@ class main_form(QtWidgets.QMainWindow):
         with self.mysql_connection_open() as con_sql:
             try:
                 df = pd.read_sql(query, con=con_sql)
+                print(df)
             except:
                 exception_message = str(sys.exc_info())
                 self.error_dialog.showMessage(exception_message)
@@ -787,21 +792,31 @@ class main_form(QtWidgets.QMainWindow):
             self.manage_project_table_widget.setRowCount(0)
             self.manage_project_table_widget.setColumnCount(3)
             self.manage_project_table_widget.verticalHeader().setVisible(False)
-
+            print("ERROR")
             columns = ["id_project", "Project name", "Description"]
             self.manage_project_table_widget.setHorizontalHeaderLabels(columns)
+            print("before_itter")
             for index, row in df.iterrows():
                 self.manage_project_table_widget.insertRow(index)
+                print("row_inserted")
+                print(row)
                 id_project = str(row["id_project"])
+                print("why?")
                 project_name = row["project_name"]
+                print("hey")
                 project_description = row["project_description"]
+                print("Yoyo avec moi")
                 item = QTableWidgetItem(id_project)
                 item.setFlags(QtCore.Qt.ItemIsSelectable | QtCore.Qt.ItemIsEnabled)
+                print("Item0")
                 self.manage_project_table_widget.setItem(index, 0, item)
                 item = QTableWidgetItem(project_name)
+                print("item1")
                 self.manage_project_table_widget.setItem(index, 1, item)
                 item = QTableWidgetItem(project_description)
+                print("item2")
                 self.manage_project_table_widget.setItem(index, 2, item)
+                print("after an itter")
 
         elif mode == "Person":
             self.manage_person_table_widget.clear()
@@ -1200,7 +1215,9 @@ class main_form(QtWidgets.QMainWindow):
                 return False
 
     def manage_property_manage_button_clicked(self):
+        print("Here222")
         self.main_stacked_widget.setCurrentIndex(4)
+        print("Heerreee1111")
         self.manage_initial_function()
 
     """
@@ -1208,6 +1225,7 @@ class main_form(QtWidgets.QMainWindow):
     """
 
     def manage_initial_function(self, new_property=""):
+        print("Here")
         query = "SELECT property FROM tfdb_config.metadata_category;"
         with self.mysql_connection_open() as con_sql:
             try:
@@ -1219,8 +1237,11 @@ class main_form(QtWidgets.QMainWindow):
                 self.error_dialog.showMessage(exception_message)
         if new_property:
             metadata_list.insert(0, new_property)
+        print("Here2")
         self.manage_metadata_combo.clear()
+        print("Here3")
         self.manage_metadata_combo.addItems(metadata_list)
+        print("Here4")
 
     def manage_create_property(self, new_property):
 

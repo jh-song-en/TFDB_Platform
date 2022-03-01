@@ -1,1 +1,1 @@
-{"MySQL_host": "localhost", "SFTP_host": "localhost", "MySQL_port": "2206", "SFTP_port": "2202", "user_id": "manager"}
+{"MySQL_host": "115.145.146.20", "SFTP_host": "115.145.146.20", "MySQL_port": "21306", "SFTP_port": "21312", "user_id": "manager", "download_directory": "C:/Users/thdwo/Desktop/Donwload"}
